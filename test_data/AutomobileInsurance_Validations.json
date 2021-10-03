@@ -1,0 +1,43 @@
+{
+  "Insured_Vehicle": "Automobile Insurance",
+  "vehicle_Insurance_details": {
+    "vehicle_data": {
+      "Make": "BMW",
+      "Engine_Performance": 2001,
+      "Date_Of_Manufacture": "4/20/2020",
+      "Number_Of_Seats": "3",
+      "Fuel_Type": "Gas",
+      "List_Price": 100001,
+      "Licence_Plate_Number": 123,
+      "Annual_Mileage": 100001
+    },
+    "Insurance_Data": {
+      "First_Name": 1234,
+      "Last_Name": 1234,
+      "Date_Of_Birth": "04/12/1994",
+      "Gender": "Male",
+      "Street_Address":"AB",
+      "Country": "India",
+      "Zip_Code": 4,
+      "City": "Pune",
+      "Occupation": "Service",
+      "Hobbies": "Other,Sky Diving",
+      "Website": "test"
+    },
+    "Product_Data": {
+      "Start_Date": "04.12/2020",
+      "Insurance-Sum": 1020,
+      "Merit_Rating": "Bonus 8",
+      "Damage_Infrastructure": "Full Coverage",
+      "Optional_Products": "Euro Protection",
+      "Courtesy_Car": "Yes"
+    },
+    "Send_Quote": {
+      "Email": "Test123@gmail.com",
+      "Phone": 1234567898,
+      "UserName": "Test",
+      "Password": "Test",
+      "Comments": "Comments"
+    }
+  }
+}
