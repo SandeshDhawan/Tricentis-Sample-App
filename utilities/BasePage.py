@@ -30,7 +30,7 @@ class BasePage:
     def get_test_data(self, file_name):
         print(os.getcwd())
         # test_data_file_path = os.getcwd().replace("tests", "test_data") + "\\" + file_name
-        test_data_file_path = "C:\Users\Dhawan\.jenkins\workspace\test_automobile_insurance_error_message_test_case\test_data"+ "\\" + file_name
+        test_data_file_path = "C:\Users\Dhawan\.jenkins\workspace\test_automobile_insurance_error_message_test_case\test_data" + "\\" + file_name
         with open(test_data_file_path) as f:
             payload = json.load(f)
         return payload
