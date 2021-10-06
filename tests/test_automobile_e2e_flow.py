@@ -1,3 +1,4 @@
+import os
 import time
 
 import pytest
@@ -38,7 +39,8 @@ class TestAutomobileInsurance:
         price_option_page = PriceOptionPage(self.driver)
         send_quote_page = SendQuotePage(self.driver)
 
-        test_data = homepage.get_test_data("AutomobileInsurance_e2e_flow.json")
+        test_data = homepage.get_test_data(os.path.dirname(os.path.abspath(__file__)),
+                                           "AutomobileInsurance_e2e_flow.json")
         homepage.click_automobile_header_link()
         vehicle_data_page.enter_vehicle_data(test_data)
         insurance_data_page.enter_insurance_date(test_data)
@@ -46,4 +48,3 @@ class TestAutomobileInsurance:
         price_option_page.select_price_option(test_data)
         price_option_page.click_next_button()
         send_quote_page.enter_send_quote_details(test_data)
-

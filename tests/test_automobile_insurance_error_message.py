@@ -58,7 +58,6 @@ class TestAutomobileInsurance:
 
         test_data = homepage.get_test_data(os.path.dirname(os.path.abspath(__file__)),
                                            "AutomobileInsurance_Validations.json")
-        # test_data = homepage.get_test_data("AutomobileInsurance_Validations.json")
         homepage.click_automobile_header_link()
         vehicle_data_page.enter_list_price(test_data)
         error_message = vehicle_data_page.get_list_price_error_message()
@@ -88,7 +87,6 @@ class TestAutomobileInsurance:
 
         test_data = homepage.get_test_data(os.path.dirname(os.path.abspath(__file__)),
                                            "AutomobileInsurance_Validations.json")
-        # test_data = homepage.get_test_data("AutomobileInsurance_Validations.json")
         homepage.click_automobile_header_link()
         vehicle_data_page.enter_annual_mileage(test_data)
         error_message = vehicle_data_page.get_annual_mileage_error_message()
@@ -121,7 +119,6 @@ class TestAutomobileInsurance:
         insurance_data_page = InsurantDataPage(self.driver)
         test_data = homepage.get_test_data(os.path.dirname(os.path.abspath(__file__)),
                                            "AutomobileInsurance_Validations.json")
-        # test_data = homepage.get_test_data("AutomobileInsurance_Validations.json")
         homepage.click_automobile_header_link()
         vehicle_data_page.enter_vehicle_data(test_data)
         insurance_data_page.enter_first_name(test_data)
@@ -156,7 +153,6 @@ class TestAutomobileInsurance:
 
         test_data = homepage.get_test_data(os.path.dirname(os.path.abspath(__file__)),
                                            "AutomobileInsurance_Validations.json")
-        # test_data = homepage.get_test_data("AutomobileInsurance_Validations.json")
         homepage.click_automobile_header_link()
         vehicle_data_page.enter_vehicle_data(test_data)
         insurance_data_page.enter_last_name(test_data)
@@ -190,7 +186,6 @@ class TestAutomobileInsurance:
 
         test_data = homepage.get_test_data(os.path.dirname(os.path.abspath(__file__)),
                                            "AutomobileInsurance_Validations.json")
-        # test_data = homepage.get_test_data("AutomobileInsurance_Validations.json")
         homepage.click_automobile_header_link()
         vehicle_data_page.enter_vehicle_data(test_data)
         insurance_data_page.enter_street_address(test_data)
@@ -221,7 +216,6 @@ class TestAutomobileInsurance:
 
         test_data = homepage.get_test_data(os.path.dirname(os.path.abspath(__file__)),
                                            "AutomobileInsurance_Validations.json")
-        # test_data = homepage.get_test_data("AutomobileInsurance_Validations.json")
         homepage.click_automobile_header_link()
         vehicle_data_page.enter_vehicle_data(test_data)
 
@@ -265,7 +259,6 @@ class TestAutomobileInsurance:
 
         test_data = homepage.get_test_data(os.path.dirname(os.path.abspath(__file__)),
                                            "AutomobileInsurance_Validations.json")
-        # test_data = homepage.get_test_data("AutomobileInsurance_Validations.json")
         homepage.click_automobile_header_link()
         vehicle_data_page.enter_vehicle_data(test_data)
 
@@ -303,7 +296,6 @@ class TestAutomobileInsurance:
 
         test_data = homepage.get_test_data(os.path.dirname(os.path.abspath(__file__)),
                                            "AutomobileInsurance_Validations.json")
-        # test_data = homepage.get_test_data("AutomobileInsurance_Validations.json")
         homepage.click_automobile_header_link()
         vehicle_data_page.enter_vehicle_data(test_data)
 
