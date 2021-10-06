@@ -28,12 +28,9 @@ class BasePage:
     def implicit_wait(self, time):
         self.driver.implicitly_wait(time)
 
-    def get_test_data(self, file_name):
+    def get_test_data(self, file_path, file_name):
 
-        path1 = Path(file_name)
-        current_dir = os.getcwd()
-        print(os.path.dirname(current_dir))
-        test_data_file_path = os.path.dirname(current_dir)+"\\"+"tests"+"\\"+file_name
+        test_data_file_path = file_path.replace("tests", "test_data")+"\\"+file_name
         # test_data_file_path = os.getcwd().replace("tests", "test_data") + "\\" + file_name
         # test_data_file_path = "C:\\Users\\Dhawan\\.jenkins\\workspace\\test_automobile_insurance_error_message_test_case\\test_data" + "\\" + file_name
         #
