@@ -175,4 +175,3 @@ class TestHomePage:
         time.sleep(2)
         selected_insurance = homepage.verify_selected_insurance()
         assert selected_insurance == "Camper Insurance", "Camper vehicle is not present"
-

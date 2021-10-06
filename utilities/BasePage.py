@@ -28,9 +28,13 @@ class BasePage:
         self.driver.implicitly_wait(time)
 
     def get_test_data(self, file_name):
-        print(os.getcwd())
+        path = os.getcwd()
+        parent_directory = os.path.abspath(os.path.join(path, os.pardir))
+        test_data_file_path = parent_directory+"\\"+"test_data"+"\\"+file_name
+
         # test_data_file_path = os.getcwd().replace("tests", "test_data") + "\\" + file_name
-        test_data_file_path = "C:\\Users\\Dhawan\\.jenkins\\workspace\\test_automobile_insurance_error_message_test_case\\test_data" + "\\" + file_name
+        # # test_data_file_path = "C:\\Users\\Dhawan\\.jenkins\\workspace\\test_automobile_insurance_error_message_test_case\\test_data" + "\\" + file_name
+
         with open(test_data_file_path) as f:
             payload = json.load(f)
         return payload
