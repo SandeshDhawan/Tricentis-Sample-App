@@ -1,7 +1,6 @@
 import json
 import os
 from pathlib import Path
-import pathlib
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -31,12 +30,13 @@ class BasePage:
 
     def get_test_data(self, file_name):
 
-        print(pathlib.Path().resolve().joinpath(file_name))
-        test_data_file_path = pathlib.Path().resolve().joinpath(file_name)
-
+        path1 = Path(file_name)
+        current_dir = os.getcwd()
+        print(os.path.dirname(current_dir))
+        test_data_file_path = os.path.dirname(current_dir)+"\\"+"tests"+"\\"+file_name
         # test_data_file_path = os.getcwd().replace("tests", "test_data") + "\\" + file_name
         # test_data_file_path = "C:\\Users\\Dhawan\\.jenkins\\workspace\\test_automobile_insurance_error_message_test_case\\test_data" + "\\" + file_name
-
+        #
         with open(test_data_file_path) as f:
             payload = json.load(f)
         return payload
