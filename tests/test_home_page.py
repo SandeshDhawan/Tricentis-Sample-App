@@ -2,7 +2,7 @@ import time
 
 import pytest
 from Pages.HomePage import HomePage
-#py.test -v -s --browser_name chrome --screenshot=on --screenshot_path=off --alluredir="C:\Users\Dhawan\PycharmProjects\TricentisSampleApp\reports"
+#py.test -v -s -m smoke --browser_name chrome --screenshot=on --screenshot_path=off --alluredir="C:\Users\Dhawan\PycharmProjects\TricentisSampleApp\reports"
 # allure serve C:\Users\Dhawan\PycharmProjects\TricentisSampleApp\reports
 
 
@@ -10,6 +10,7 @@ from Pages.HomePage import HomePage
 @pytest.mark.usefixtures("setup")
 class TestHomePage:
 
+    @pytest.mark.smoke
     def test_home_Page_details(self):
         """
         Given:
@@ -39,6 +40,7 @@ class TestHomePage:
         homepage.verify_get_a_quote_link()
         homepage.verify_vehicle_page_links()
 
+    @pytest.mark.smoke
     def test_verify_user_is_able_to_navigate_to_automobile_insurance_page_through_header(self):
         """
                 Given:
@@ -57,6 +59,7 @@ class TestHomePage:
         selected_insurance = homepage.verify_selected_insurance()
         assert selected_insurance == "Automobile Insurance", "Automobile vehicle is not present"
 
+    @pytest.mark.smoke
     def test_verify_user_is_able_to_navigate_to_truck_insurance_page_through_header(self):
         """
                 Given:
@@ -74,6 +77,7 @@ class TestHomePage:
         selected_insurance = homepage.verify_selected_insurance()
         assert selected_insurance == "Truck Insurance", "Truck vehicle is not present"
 
+    @pytest.mark.regression
     def test_verify_user_is_able_to_navigate_to_motorcycle_insurance_page_through_header(self):
         """
                 Given:
@@ -91,6 +95,7 @@ class TestHomePage:
         selected_insurance = homepage.verify_selected_insurance()
         assert selected_insurance == "Motorcycle Insurance", "Motorcycle vehicle is not present"
 
+    @pytest.mark.regression
     def test_verify_user_is_able_to_navigate_to_camper_insurance_page_through_header(self):
         """
                 Given:
@@ -108,6 +113,7 @@ class TestHomePage:
         selected_insurance = homepage.verify_selected_insurance()
         assert selected_insurance == "Camper Insurance", "Camper vehicle is not present"
 
+    @pytest.mark.regression
     def test_verify_user_is_able_to_navigate_to_automobile_insurance_page_through_page_link(self):
         """
                 Given:
@@ -125,6 +131,7 @@ class TestHomePage:
         selected_insurance = homepage.verify_selected_insurance()
         assert selected_insurance == "Automobile Insurance", "Automobile vehicle is not present"
 
+    @pytest.mark.smoke
     def test_verify_user_is_able_to_navigate_to_truck_insurance_page_through_page_link(self):
         """
                 Given:
@@ -142,6 +149,7 @@ class TestHomePage:
         selected_insurance = homepage.verify_selected_insurance()
         assert selected_insurance == "Truck Insurance", "Truck vehicle is not present"
 
+    @pytest.mark.smoke
     def test_verify_user_is_able_to_navigate_to_motorcycle_insurance_page_through_page_link(self):
         """
                 Given:
@@ -159,6 +167,7 @@ class TestHomePage:
         selected_insurance = homepage.verify_selected_insurance()
         assert selected_insurance == "Motorcycle Insurance", "Motorcycle vehicle is not present"
 
+    @pytest.mark.smoke
     def test_verify_user_is_able_to_navigate_to_camper_insurance_page_through_page_link(self):
         """
                 Given:

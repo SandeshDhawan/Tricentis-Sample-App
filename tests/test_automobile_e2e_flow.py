@@ -15,6 +15,7 @@ class TestAutomobileInsurance:
 
     BASEPATH = os.path.dirname(os.path.abspath(__file__))
 
+    @pytest.mark.regression
     def test_automobile_e2e_flow(self):
         """
         Given:

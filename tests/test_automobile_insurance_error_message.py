@@ -15,6 +15,7 @@ class TestAutomobileInsurance:
 
     BASEPATH = os.path.dirname(os.path.abspath(__file__))
 
+    @pytest.mark.regression
     def test_engine_performance_error_message(self):
         """
         Given:
@@ -43,6 +44,7 @@ class TestAutomobileInsurance:
         error_message = vehicle_data_page.get_engine_performance_error_message()
         assert error_message == "Must be a number between 1 and 2000", "Wrong Error Message for Engine Performance"
 
+    @pytest.mark.regression
     def test_price_error_message(self):
         """
             Given:
@@ -71,6 +73,7 @@ class TestAutomobileInsurance:
         error_message = vehicle_data_page.get_list_price_error_message()
         assert error_message == "Must be a number between 500 and 100000", "Wrong Error Message for List Price"
 
+    @pytest.mark.regression
     def test_annual_mileage_error_message(self):
         """
             Given:
@@ -100,6 +103,7 @@ class TestAutomobileInsurance:
         error_message = vehicle_data_page.get_annual_mileage_error_message()
         assert error_message == "Must be a number between 100 and 100000", "Wrong Error Message for Annual Mileage"
 
+    @pytest.mark.regression
     def test_first_name_error_message(self):
         """
             Given:
@@ -134,6 +138,7 @@ class TestAutomobileInsurance:
         error = insurance_data_page.get_first_name_error_message()
         assert error == "Must be at least 2 characters long and must only contain letters"
 
+    @pytest.mark.regression
     def test_last_name_error_message(self):
         """
             Given:
@@ -168,6 +173,7 @@ class TestAutomobileInsurance:
         error = insurance_data_page.get_last_name_error_message()
         assert error == "Must be at least 2 characters long and must only contain letters"
 
+    @pytest.mark.regression
     def test_street_address_error_message(self):
         """
             Given:
@@ -196,6 +202,7 @@ class TestAutomobileInsurance:
         error = insurance_data_page.get_street_address_error_message()
         assert error == "Must be at least 3 characters long"
 
+    @pytest.mark.regression
     def test_date_of_birth_error_message(self):
         """
             Given:
@@ -239,6 +246,7 @@ class TestAutomobileInsurance:
         error = insurance_data_page.get_date_of_birth_error_message()
         assert error == "You must be between 18 and 70 years of age"
 
+    @pytest.mark.regression
     def test_zip_code_error_message(self):
         """
             Given:
@@ -278,6 +286,7 @@ class TestAutomobileInsurance:
         assert error == "Must be a number between 4 and 8 digits"
         time.sleep(2)
 
+    @pytest.mark.regression
     def test_website_error_message(self):
         """
             Given:
