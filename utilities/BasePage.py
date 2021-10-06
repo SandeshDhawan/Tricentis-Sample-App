@@ -1,5 +1,7 @@
 import json
 import os
+from pathlib import Path
+import pathlib
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -28,12 +30,12 @@ class BasePage:
         self.driver.implicitly_wait(time)
 
     def get_test_data(self, file_name):
-        path = os.getcwd()
-        parent_directory = os.path.abspath(os.path.join(path, os.pardir))
-        test_data_file_path = parent_directory+"\\"+"test_data"+"\\"+file_name
+
+        print(pathlib.Path().resolve().joinpath(file_name))
+        test_data_file_path = pathlib.Path().resolve().joinpath(file_name)
 
         # test_data_file_path = os.getcwd().replace("tests", "test_data") + "\\" + file_name
-        # # test_data_file_path = "C:\\Users\\Dhawan\\.jenkins\\workspace\\test_automobile_insurance_error_message_test_case\\test_data" + "\\" + file_name
+        # test_data_file_path = "C:\\Users\\Dhawan\\.jenkins\\workspace\\test_automobile_insurance_error_message_test_case\\test_data" + "\\" + file_name
 
         with open(test_data_file_path) as f:
             payload = json.load(f)
