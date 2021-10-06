@@ -1,5 +1,4 @@
 import os
-import time
 
 import pytest
 
@@ -13,6 +12,9 @@ from Pages.VehicleDataPage import VehicleDataPage
 
 @pytest.mark.usefixtures("setup")
 class TestAutomobileInsurance:
+
+    BASEPATH = os.path.dirname(os.path.abspath(__file__))
+
     def test_automobile_e2e_flow(self):
         """
         Given:
@@ -39,8 +41,7 @@ class TestAutomobileInsurance:
         price_option_page = PriceOptionPage(self.driver)
         send_quote_page = SendQuotePage(self.driver)
 
-        test_data = homepage.get_test_data(os.path.dirname(os.path.abspath(__file__)),
-                                           "AutomobileInsurance_e2e_flow.json")
+        test_data = homepage.get_test_data(self.BASEPATH, "AutomobileInsurance_e2e_flow.json")
         homepage.click_automobile_header_link()
         vehicle_data_page.enter_vehicle_data(test_data)
         insurance_data_page.enter_insurance_date(test_data)
